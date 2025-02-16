@@ -42,19 +42,22 @@ class _FibonacciScreenState extends State<FibonacciScreen> {
                   isHightlighted: isHightlighted,
                   onTap: () {
                     _viewModel.onPressedItemMainList(item);
-                    showModalBottomSheet<FibonacciModel>(
+                    showModalBottomSheet<bool>(
                       context: context,
+                      enableDrag: true,
+                      showDragHandle: true,
                       builder: (context) {
                         return _FibonacciBottomsheet(
                           data: _viewModel.state.listByType(item.type),
                           highlightIndex: _viewModel.state.hightlightIndexByType(item.type),
                           onTap: (selectedItem) {
                             _viewModel.onPressedItemBottomSheet(selectedItem);
-                            Navigator.pop(context, selectedItem);
+                            Navigator.pop(context, true);
                           },
                         );
                       },
-                    ).then((_) {
+                    ).then((value) {
+                      if(value != true) return;
                       if (_viewModel.state.hightlightIndex == null) return;
                       _controller.scrollToIndex(
                           _viewModel.state.hightlightIndex!, FibonacciItemWidget.height);

@@ -24,11 +24,14 @@ class FibonacciItemWidget extends StatelessWidget {
       child: Container(
         height: height,
         color: isHightlighted ? Colors.green : null,
-        child: Row(children: [
-          Text('Fibonacci ${data.number}, Result: ${data.result}'),
-          const Spacer(),
-          Icon(data.type.icon),
-        ],)
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Row(children: [
+            Text('Fibonacci ${data.number}, Result: ${data.result}'),
+            const Spacer(),
+            Icon(data.type.icon),
+          ],),
+        )
         
       ),
     );
