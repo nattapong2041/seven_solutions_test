@@ -7,7 +7,7 @@ Please read README since it shows details about my project decisions, including:
 
 You can contact me through:
 - Email: nattapong.sawa@gmail.com
-- Phone: 0870411488
+- Phone: 0879411488
 - LinkedIn: [Nattapong Sawatraksa](https://www.linkedin.com/in/nattapong-sawatraksa-139168191/)
 
 ## Environment Setup
