@@ -37,7 +37,8 @@ lib/
 │   └── fibonacci/  # Fibonacci feature module
 │       ├── model/        # Data models
 │       ├── presentation/ # UI layer (screens, widgets)
-│       └── view_model/   # Business logic and state management
+│           |── view_model/ # state management
+|           |── ui/ # ui 
 └── main.dart       # Application entry point
 ```
 
